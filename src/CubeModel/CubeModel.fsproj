@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Colors.fs" />
+    <Compile Include="Face.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 
