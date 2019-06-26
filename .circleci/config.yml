@@ -16,4 +16,6 @@ jobs:
       - run:
           name: Run tests
           command:
-            dotnet test
+            dotnet test -l:"xunit;LogFilePath=results.xml"
+      - store_test_results:
+          path: src
