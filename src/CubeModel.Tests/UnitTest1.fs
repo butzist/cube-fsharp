@@ -2,7 +2,7 @@ namespace Tests
 
 open NUnit.Framework
 
-[<TestClass>]
+[<TestFixture>]
 type TestClass () =
 
     [<SetUp>]
