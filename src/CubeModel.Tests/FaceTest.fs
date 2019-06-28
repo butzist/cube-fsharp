@@ -93,3 +93,13 @@ type TestFace() =
         Assert.That(face.Get 0 0, Is.EqualTo(White))
         Assert.That(face.Get 0 2, Is.EqualTo(Red))
         Assert.That(face.Get 1 1, Is.EqualTo(Yellow))
+
+    [<Test>]
+    member this.TestSerialize3x3() =
+        let face = Face.Single 3 White
+        face.Set 0 0 Red
+        face.Set 0 2 Orange
+        face.Set 2 0 Blue
+        face.Set 2 2 Green
+        face.Set 1 1 Yellow
+        Assert.That(face.Serialize, Is.EqualTo("rwowywbwg"))

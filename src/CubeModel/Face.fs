@@ -29,3 +29,8 @@ module Face =
             Face(dim, colors)
 
         member this.Clone = Face(this.Dim, this.Colors |> Array2D.copy)
+        member this.Serialize =
+            this.Colors
+            |> Seq.cast<Colors.Color>
+            |> Seq.map (Colors.serialize >> string)
+            |> String.concat ""
